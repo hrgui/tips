@@ -12,6 +12,12 @@ function App() {
     document.getElementsByTagName("html")[0]?.setAttribute("data-theme", theme);
   }, [theme]);
 
+  useEffect(() => {
+    const el = document.getElementById("tipInput");
+    el?.focus();
+    console.log(el);
+  }, []);
+
   return (
     <Theme dataTheme={theme}>
       <ControlsBar

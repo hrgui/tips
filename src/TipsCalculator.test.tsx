@@ -15,6 +15,7 @@ it("should render default initial state nornally", () => {
         >
           <input
             class="input input-lg input-bordered w-full text-4xl p-4 text-right"
+            id="tipInput"
             placeholder="Type here"
             type="text"
           />
@@ -40,6 +41,7 @@ it("should handle case when an invalid value is typed", async () => {
         >
           <input
             class="input input-lg input-bordered w-full text-4xl p-4 text-right"
+            id="tipInput"
             placeholder="Type here"
             type="text"
           />
@@ -65,86 +67,153 @@ it("should handle case when legit value is typed", async () => {
         >
           <input
             class="input input-lg input-bordered w-full text-4xl p-4 text-right"
+            id="tipInput"
             placeholder="Type here"
             type="text"
           />
         </div>
         <div>
           <div
-            class="tip-show"
+            class="flex text-5xl pb-4 pt-4 text-right"
           >
-            15%: $13.37 + 
-            <strong>
-              $2.01
-            </strong>
-             = 
-            <strong>
-              $15.38
-            </strong>
+            <div
+              class="opacity-80"
+            >
+              15%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +2.01
+              </div>
+              <div
+                class="font-semibold"
+              >
+                15.38
+              </div>
+            </div>
           </div>
           <div
-            class="tip-show--small"
+            class="flex text-right text-3xl text-info pb-4"
           >
-            19.67%: $13.37 + 
-            <strong>
-              $2.63
-            </strong>
-             = 
-            <strong>
-              $16.00
-            </strong>
-          </div>
-        </div>
-        <div>
-          <div
-            class="tip-show"
-          >
-            18%: $13.37 + 
-            <strong>
-              $2.41
-            </strong>
-             = 
-            <strong>
-              $15.78
-            </strong>
-          </div>
-          <div
-            class="tip-show--small"
-          >
-            19.67%: $13.37 + 
-            <strong>
-              $2.63
-            </strong>
-             = 
-            <strong>
-              $16.00
-            </strong>
+            <div
+              class="opacity-80"
+            >
+              19.67%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +2.63
+              </div>
+              <div
+                class="font-semibold"
+              >
+                16.00
+              </div>
+            </div>
           </div>
         </div>
         <div>
           <div
-            class="tip-show"
+            class="flex text-5xl pb-4 pt-4 text-right"
           >
-            20%: $13.37 + 
-            <strong>
-              $2.67
-            </strong>
-             = 
-            <strong>
-              $16.04
-            </strong>
+            <div
+              class="opacity-80"
+            >
+              18%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +2.41
+              </div>
+              <div
+                class="font-semibold"
+              >
+                15.78
+              </div>
+            </div>
           </div>
           <div
-            class="tip-show--small"
+            class="flex text-right text-3xl text-info pb-4"
           >
-            27.15%: $13.37 + 
-            <strong>
-              $3.63
-            </strong>
-             = 
-            <strong>
-              $17.00
-            </strong>
+            <div
+              class="opacity-80"
+            >
+              19.67%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +2.63
+              </div>
+              <div
+                class="font-semibold"
+              >
+                16.00
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex text-5xl pb-4 pt-4 text-right"
+          >
+            <div
+              class="opacity-80"
+            >
+              20%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +2.67
+              </div>
+              <div
+                class="font-semibold"
+              >
+                16.04
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex text-right text-3xl text-info pb-4"
+          >
+            <div
+              class="opacity-80"
+            >
+              27.15%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +3.63
+              </div>
+              <div
+                class="font-semibold"
+              >
+                17.00
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -19,9 +19,19 @@ export function TipShow(props: {
   small?: boolean;
 }) {
   return (
-    <div className={props.small ? "tip-show--small" : "tip-show"}>
-      {props.percent}%: ${props.base.toFixed(2)} + <strong>${props.tipValue.toFixed(2)}</strong> ={" "}
-      <strong>${props.totalVal.toFixed(2)}</strong>
+    <div
+      className={
+        props.small
+          ? "flex text-right text-3xl text-info pb-4"
+          : "flex text-5xl pb-4 pt-4 text-right"
+      }
+    >
+      <div className="opacity-80">{props.percent}%:</div>
+
+      <div className="ml-auto">
+        <div className="font-semibold">+{props.tipValue.toFixed(2)}</div>
+        <div className="font-semibold">{props.totalVal.toFixed(2)}</div>
+      </div>
     </div>
   );
 }

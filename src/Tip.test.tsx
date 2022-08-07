@@ -22,28 +22,50 @@ describe("Tip", () => {
       <DocumentFragment>
         <div>
           <div
-            class="tip-show"
+            class="flex text-5xl pb-4 pt-4 text-right"
           >
-            15%: $35.25 + 
-            <strong>
-              $5.29
-            </strong>
-             = 
-            <strong>
-              $40.54
-            </strong>
+            <div
+              class="opacity-80"
+            >
+              15%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +5.29
+              </div>
+              <div
+                class="font-semibold"
+              >
+                40.54
+              </div>
+            </div>
           </div>
           <div
-            class="tip-show--small"
+            class="flex text-right text-3xl text-info pb-4"
           >
-            16.31%: $35.25 + 
-            <strong>
-              $5.75
-            </strong>
-             = 
-            <strong>
-              $41.00
-            </strong>
+            <div
+              class="opacity-80"
+            >
+              16.31%:
+            </div>
+            <div
+              class="ml-auto"
+            >
+              <div
+                class="font-semibold"
+              >
+                +5.75
+              </div>
+              <div
+                class="font-semibold"
+              >
+                41.00
+              </div>
+            </div>
           </div>
         </div>
       </DocumentFragment>

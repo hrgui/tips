@@ -48,6 +48,7 @@ test("should render without crashing", () => {
           >
             <input
               class="input input-lg input-bordered w-full text-4xl p-4 text-right"
+              id="tipInput"
               placeholder="Type here"
               type="text"
             />
@@ -109,6 +110,7 @@ test("should be able to toggle theme to dark from light", async () => {
           >
             <input
               class="input input-lg input-bordered w-full text-4xl p-4 text-right"
+              id="tipInput"
               placeholder="Type here"
               type="text"
             />

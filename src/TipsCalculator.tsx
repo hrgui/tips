@@ -8,6 +8,7 @@ export default function TipsCalculator() {
     <div className="card bg-base-200 p-6">
       <div className="form-control w-full">
         <input
+          id="tipInput"
           ref={null}
           type="text"
           placeholder="Type here"
