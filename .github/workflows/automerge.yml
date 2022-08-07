@@ -20,7 +20,7 @@ jobs:
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
       - name: automerge
-        uses: 'pascalgn/automerge-action@master'
+        uses: "pascalgn/automerge-action@v0.15.3"
         env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          MERGE_METHOD: 'squash'
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_METHOD: "squash"
