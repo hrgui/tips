@@ -38,13 +38,20 @@ jobs:
           echo "\`\`\`"  >> $GITHUB_STEP_SUMMARY
 
       - name: ⚙️ Build
-        run: yarn build && touch build/.nojekyll
+        run: yarn build
 
-      - name: 🚀 Deploy
+      - name: ⚙️ Setup Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v1
+        uses: actions/configure-pages@v1
+
+      - name: 📁 Upload artifact
+        if: success()
+        uses: actions/upload-pages-artifact@v1
         with:
-          target_branch: gh-pages
-          build_dir: build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Upload entire repository
+          path: "./build"
+
+      - name: 🚀 Deploy to GitHub Pages
+        if: success()
+        id: deployment
+        uses: actions/deploy-pages@main
