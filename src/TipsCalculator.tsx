@@ -1,9 +1,7 @@
 import * as React from "react";
 import { Tip } from "./Tip";
 
-export interface ITipsCalculatorProps {}
-
-export default function TipsCalculator(props: ITipsCalculatorProps) {
+export default function TipsCalculator() {
   const [currentValue, setCurrentValue] = React.useState<number>(0);
 
   return (

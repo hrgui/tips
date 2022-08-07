@@ -1,8 +1,6 @@
-import * as React from 'react';
-
 export interface ITipProps {
-  percent: number;
-  base: number;
+  percent?: number;
+  base?: number;
 }
 
 /**
@@ -10,28 +8,47 @@ export interface ITipProps {
  * https://stackoverflow.com/questions/11832914/round-to-at-most-2-decimal-places-only-if-necessary
  */
 export function round(num: number) {
-  return Math.round((num + Number.EPSILON) * 100) / 100
+  return Math.round((num + Number.EPSILON) * 100) / 100;
 }
 
-export function TipShow(props: {percent: number, base: number, tipValue: number, totalVal: number, small?: boolean}) {
-  return <div className={props.small ? 'tip-show--small' : 'tip-show'}>{props.percent}%: ${props.base.toFixed(2)} + <strong>${props.tipValue.toFixed(2)}</strong> = <strong>${props.totalVal.toFixed(2)}</strong></div>
+export function TipShow(props: {
+  percent: number;
+  base: number;
+  tipValue: number;
+  totalVal: number;
+  small?: boolean;
+}) {
+  return (
+    <div className={props.small ? "tip-show--small" : "tip-show"}>
+      {props.percent}%: ${props.base.toFixed(2)} + <strong>${props.tipValue.toFixed(2)}</strong> ={" "}
+      <strong>${props.totalVal.toFixed(2)}</strong>
+    </div>
+  );
 }
 
-export function Tip (props: ITipProps) {
-  const tipValue = round(props.base * (props.percent / 100));
-  const totalVal = props.base + tipValue;
-  const roundUpTotalVal = Math.ceil(totalVal);
-  const roundUpTipValue = roundUpTotalVal - props.base;
-  const roundUpPercent = round((roundUpTipValue / props.base) * 100);
-
-  if (props.base === 0) {
+export function Tip({ base, percent }: ITipProps) {
+  if (!base || !percent) {
     return null;
   }
 
+  const tipValue = round(base * (percent / 100));
+  const totalVal = base + tipValue;
+  const roundUpTotalVal = Math.ceil(totalVal);
+  const roundUpTipValue = roundUpTotalVal - base;
+  const roundUpPercent = round((roundUpTipValue / base) * 100);
+
   return (
     <div>
-      <TipShow percent={props.percent} base={props.base} tipValue={tipValue} totalVal={totalVal} />
-      {roundUpPercent !== props.percent && <TipShow small percent={roundUpPercent} base={props.base} tipValue={roundUpTipValue} totalVal={roundUpTotalVal} />}
+      <TipShow percent={percent} base={base} tipValue={tipValue} totalVal={totalVal} />
+      {roundUpPercent !== percent && (
+        <TipShow
+          small
+          percent={roundUpPercent}
+          base={base}
+          tipValue={roundUpTipValue}
+          totalVal={roundUpTotalVal}
+        />
+      )}
     </div>
   );
 }
