@@ -8,7 +8,7 @@ it("should render default initial state nornally", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="card bg-base-200 p-6 shadow-xl"
+        class="card bg-base-200 p-6"
       >
         <div
           class="form-control w-full"
@@ -33,7 +33,7 @@ it("should handle case when an invalid value is typed", async () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="card bg-base-200 p-6 shadow-xl"
+        class="card bg-base-200 p-6"
       >
         <div
           class="form-control w-full"
@@ -58,7 +58,7 @@ it("should handle case when legit value is typed", async () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="card bg-base-200 p-6 shadow-xl"
+        class="card bg-base-200 p-6"
       >
         <div
           class="form-control w-full"

@@ -5,7 +5,7 @@ export default function TipsCalculator() {
   const [currentValue, setCurrentValue] = React.useState<number>(0);
 
   return (
-    <div className="card bg-base-200 p-6 shadow-xl">
+    <div className="card bg-base-200 p-6">
       <div className="form-control w-full">
         <input
           ref={null}
