@@ -47,7 +47,7 @@ test("should render without crashing", () => {
             class="form-control w-full"
           >
             <input
-              class="input w-full text-5xl p-4 text-right"
+              class="input input-lg input-bordered w-full text-4xl p-4 text-right"
               placeholder="Type here"
               type="text"
             />
@@ -108,7 +108,7 @@ test("should be able to toggle theme to dark from light", async () => {
             class="form-control w-full"
           >
             <input
-              class="input w-full text-5xl p-4 text-right"
+              class="input input-lg input-bordered w-full text-4xl p-4 text-right"
               placeholder="Type here"
               type="text"
             />

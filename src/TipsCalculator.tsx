@@ -11,7 +11,7 @@ export default function TipsCalculator() {
           ref={null}
           type="text"
           placeholder="Type here"
-          className="input w-full text-5xl p-4 text-right"
+          className="input input-lg input-bordered w-full text-4xl p-4 text-right"
           onChange={(e) => +e.target.value && setCurrentValue(+e.target.value)}
         />
       </div>

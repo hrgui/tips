@@ -14,7 +14,7 @@ it("should render default initial state nornally", () => {
           class="form-control w-full"
         >
           <input
-            class="input w-full text-5xl p-4 text-right"
+            class="input input-lg input-bordered w-full text-4xl p-4 text-right"
             placeholder="Type here"
             type="text"
           />
@@ -39,7 +39,7 @@ it("should handle case when an invalid value is typed", async () => {
           class="form-control w-full"
         >
           <input
-            class="input w-full text-5xl p-4 text-right"
+            class="input input-lg input-bordered w-full text-4xl p-4 text-right"
             placeholder="Type here"
             type="text"
           />
@@ -64,7 +64,7 @@ it("should handle case when legit value is typed", async () => {
           class="form-control w-full"
         >
           <input
-            class="input w-full text-5xl p-4 text-right"
+            class="input input-lg input-bordered w-full text-4xl p-4 text-right"
             placeholder="Type here"
             type="text"
           />
