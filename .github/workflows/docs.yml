@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - "src/**"
+      - ".github/workflows/**"
+      - "package.json"
+      - "vite.config.ts"
     branches:
       - main
 jobs:
