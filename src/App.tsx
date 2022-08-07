@@ -15,7 +15,6 @@ function App() {
   useEffect(() => {
     const el = document.getElementById("tipInput");
     el?.focus();
-    console.log(el);
   }, []);
 
   return (

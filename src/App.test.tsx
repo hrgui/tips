@@ -41,19 +41,18 @@ test("should render without crashing", () => {
           </div>
         </div>
         <div
-          class="card bg-base-200 p-6"
+          class="card bg-base-200 z-10 mb-4 form-control w-full sticky top-0 p-4 shadow-md"
         >
-          <div
-            class="form-control w-full"
-          >
-            <input
-              class="input input-lg input-bordered w-full text-4xl p-4 text-right"
-              id="tipInput"
-              placeholder="Type here"
-              type="text"
-            />
-          </div>
+          <input
+            class="input input-lg input-bordered w-full text-4xl p-4 text-right"
+            id="tipInput"
+            placeholder="Type here"
+            type="text"
+          />
         </div>
+        <div
+          class="card bg-base-200 p-6 pt-4 pb-4"
+        />
       </div>
     </DocumentFragment>
   `);
@@ -103,19 +102,18 @@ test("should be able to toggle theme to dark from light", async () => {
           </div>
         </div>
         <div
-          class="card bg-base-200 p-6"
+          class="card bg-base-200 z-10 mb-4 form-control w-full sticky top-0 p-4 shadow-md"
         >
-          <div
-            class="form-control w-full"
-          >
-            <input
-              class="input input-lg input-bordered w-full text-4xl p-4 text-right"
-              id="tipInput"
-              placeholder="Type here"
-              type="text"
-            />
-          </div>
+          <input
+            class="input input-lg input-bordered w-full text-4xl p-4 text-right"
+            id="tipInput"
+            placeholder="Type here"
+            type="text"
+          />
         </div>
+        <div
+          class="card bg-base-200 p-6 pt-4 pb-4"
+        />
       </div>
     </DocumentFragment>
   `);
