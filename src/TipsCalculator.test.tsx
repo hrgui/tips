@@ -84,9 +84,7 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +2.01
               </div>
               <div
@@ -107,9 +105,7 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +2.63
               </div>
               <div
@@ -132,9 +128,7 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +2.41
               </div>
               <div
@@ -155,9 +149,7 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +2.63
               </div>
               <div
@@ -180,9 +172,7 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +2.67
               </div>
               <div
@@ -203,9 +193,7 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +3.63
               </div>
               <div

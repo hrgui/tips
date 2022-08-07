@@ -32,9 +32,7 @@ describe("Tip", () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +5.29
               </div>
               <div
@@ -55,9 +53,7 @@ describe("Tip", () => {
             <div
               class="ml-auto"
             >
-              <div
-                class="font-semibold"
-              >
+              <div>
                 +5.75
               </div>
               <div
