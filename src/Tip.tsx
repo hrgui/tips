@@ -29,7 +29,7 @@ export function TipShow(props: {
       <div className="opacity-80">{props.percent}%:</div>
 
       <div className="ml-auto">
-        <div className="font-semibold">+{props.tipValue.toFixed(2)}</div>
+        <div>+{props.tipValue.toFixed(2)}</div>
         <div className="font-semibold">{props.totalVal.toFixed(2)}</div>
       </div>
     </div>
