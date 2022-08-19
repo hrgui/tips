@@ -13,5 +13,4 @@ updates:
     rebase-strategy: "auto"
     versioning-strategy: lockfile-only
     labels:
-      - "automerge"
       - "dependencies"
