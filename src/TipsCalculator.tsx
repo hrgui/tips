@@ -1,8 +1,8 @@
-import * as React from "react";
+import { useState } from "react";
 import { Tip } from "./Tip";
 
 export default function TipsCalculator() {
-  const [currentValue, setCurrentValue] = React.useState<number>(0);
+  const [currentValue, setCurrentValue] = useState<number>(0);
 
   return (
     <>

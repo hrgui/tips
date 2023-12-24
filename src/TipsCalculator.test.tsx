@@ -77,7 +77,12 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="opacity-80"
             >
-              15%:
+              <input
+                class="input input-lg text-center text-4xl w-[6ch]"
+                type="number"
+                value="15"
+              />
+              %:
             </div>
             <div
               class="ml-auto"
@@ -121,7 +126,12 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="opacity-80"
             >
-              18%:
+              <input
+                class="input input-lg text-center text-4xl w-[6ch]"
+                type="number"
+                value="18"
+              />
+              %:
             </div>
             <div
               class="ml-auto"
@@ -165,7 +175,12 @@ it("should handle case when legit value is typed", async () => {
             <div
               class="opacity-80"
             >
-              20%:
+              <input
+                class="input input-lg text-center text-4xl w-[6ch]"
+                type="number"
+                value="20"
+              />
+              %:
             </div>
             <div
               class="ml-auto"

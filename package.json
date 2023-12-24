@@ -1,11 +1,12 @@
 {
   "name": "tips",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "homepage": "https://www.harmanradix.com/tips",
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "test": "vitest",

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export interface ITipProps {
   percent?: number;
   base?: number;
@@ -17,6 +19,7 @@ export function TipShow(props: {
   tipValue: number;
   totalVal: number;
   small?: boolean;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }) {
   return (
     <div
@@ -26,7 +29,19 @@ export function TipShow(props: {
           : "flex text-5xl pb-4 pt-4 text-right"
       }
     >
-      <div className="opacity-80">{props.percent}%:</div>
+      <div className="opacity-80">
+        {props.onChange ? (
+          <input
+            type="number"
+            className="input input-lg text-center text-4xl w-[6ch]"
+            onChange={props.onChange}
+            value={props.percent}
+          />
+        ) : (
+          props.percent
+        )}
+        %:
+      </div>
 
       <div className="ml-auto">
         <div>+{props.tipValue.toFixed(2)}</div>
@@ -37,11 +52,13 @@ export function TipShow(props: {
 }
 
 export function Tip({ base, percent }: ITipProps) {
-  if (!base || !percent) {
+  const [_percent, setPercent] = useState(percent);
+
+  if (!base || !_percent) {
     return null;
   }
 
-  const tipValue = round(base * (percent / 100));
+  const tipValue = round(base * (_percent / 100));
   const totalVal = base + tipValue;
   const roundUpTotalVal = Math.ceil(totalVal);
   const roundUpTipValue = roundUpTotalVal - base;
@@ -49,7 +66,13 @@ export function Tip({ base, percent }: ITipProps) {
 
   return (
     <div>
-      <TipShow percent={percent} base={base} tipValue={tipValue} totalVal={totalVal} />
+      <TipShow
+        onChange={(e) => setPercent(+e.target.value)}
+        percent={_percent}
+        base={base}
+        tipValue={tipValue}
+        totalVal={totalVal}
+      />
       {roundUpPercent !== percent && (
         <TipShow
           small
