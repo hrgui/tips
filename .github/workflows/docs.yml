@@ -21,20 +21,19 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: 16
+          bun-version: latest
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: bun install
 
       - name: 🧪 Test
         run: |
-          yarn test --silent --coverage
+          bun run test --silent --coverage
           echo "### Test Results 🧪 "  >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`"  >> $GITHUB_STEP_SUMMARY
-          yarn c8 report >> $GITHUB_STEP_SUMMARY
+          bun run c8 report >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`"  >> $GITHUB_STEP_SUMMARY
 
       - name: ⚙️ Build
@@ -42,11 +41,11 @@ jobs:
 
       - name: ⚙️ Setup Pages
         if: success()
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v4
 
       - name: 📁 Upload artifact
         if: success()
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: "./build"
