@@ -52,7 +52,13 @@ test("should render without crashing", () => {
         </div>
         <div
           class="card bg-base-200 p-6 pt-4 pb-4"
-        />
+        >
+          <button
+            class="btn w-full mt-4"
+          >
+            +
+          </button>
+        </div>
       </div>
     </DocumentFragment>
   `);
@@ -113,7 +119,13 @@ test("should be able to toggle theme to dark from light", async () => {
         </div>
         <div
           class="card bg-base-200 p-6 pt-4 pb-4"
-        />
+        >
+          <button
+            class="btn w-full mt-4"
+          >
+            +
+          </button>
+        </div>
       </div>
     </DocumentFragment>
   `);

@@ -19,7 +19,13 @@ it("should render default initial state nornally", () => {
       </div>
       <div
         class="card bg-base-200 p-6 pt-4 pb-4"
-      />
+      >
+        <button
+          class="btn w-full mt-4"
+        >
+          +
+        </button>
+      </div>
     </DocumentFragment>
   `);
 });
@@ -44,7 +50,13 @@ it("should handle case when an invalid value is typed", async () => {
       </div>
       <div
         class="card bg-base-200 p-6 pt-4 pb-4"
-      />
+      >
+        <button
+          class="btn w-full mt-4"
+        >
+          +
+        </button>
+      </div>
     </DocumentFragment>
   `);
 });
@@ -118,6 +130,11 @@ it("should handle case when legit value is typed", async () => {
               </div>
             </div>
           </div>
+          <button
+            class="btn btn-sm w-full"
+          >
+            -
+          </button>
         </div>
         <div>
           <div
@@ -167,6 +184,11 @@ it("should handle case when legit value is typed", async () => {
               </div>
             </div>
           </div>
+          <button
+            class="btn btn-sm w-full"
+          >
+            -
+          </button>
         </div>
         <div>
           <div
@@ -216,7 +238,17 @@ it("should handle case when legit value is typed", async () => {
               </div>
             </div>
           </div>
+          <button
+            class="btn btn-sm w-full"
+          >
+            -
+          </button>
         </div>
+        <button
+          class="btn w-full mt-4"
+        >
+          +
+        </button>
       </div>
     </DocumentFragment>
   `);

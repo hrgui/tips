@@ -3,6 +3,7 @@ import { useState } from "react";
 export interface ITipProps {
   percent?: number;
   base?: number;
+  onDelete?: () => void;
 }
 
 /**
@@ -51,7 +52,7 @@ export function TipShow(props: {
   );
 }
 
-export function Tip({ base, percent }: ITipProps) {
+export function Tip({ base, percent, onDelete }: ITipProps) {
   const [_percent, setPercent] = useState(percent);
 
   if (!base || !_percent) {
@@ -82,6 +83,9 @@ export function Tip({ base, percent }: ITipProps) {
           totalVal={roundUpTotalVal}
         />
       )}
+      <button className="btn btn-sm w-full" onClick={onDelete}>
+        -
+      </button>
     </div>
   );
 }

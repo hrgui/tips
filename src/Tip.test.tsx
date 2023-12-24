@@ -68,6 +68,11 @@ describe("Tip", () => {
               </div>
             </div>
           </div>
+          <button
+            class="btn btn-sm w-full"
+          >
+            -
+          </button>
         </div>
       </DocumentFragment>
     `);
